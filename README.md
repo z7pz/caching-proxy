@@ -3,8 +3,10 @@
 A **high-performance caching proxy** built with **Rust, Axum, and Redis** to improve response times and reduce API load. Supports **persistent caching, compression, rate limiting**, and is **fully containerized** with Docker.
 
 
+[roadmap.sh project url](https://roadmap.sh/projects/caching-server)
 
 ## 📌 **Table of Contents**  
+
 - [🔧 Features](#-features)  
 - [📥 Installation](#-installation)  
 - [🐳 Docker Setup](#-docker-setup)  
@@ -12,7 +14,6 @@ A **high-performance caching proxy** built with **Rust, Axum, and Redis** to imp
 - [📝 Usage Examples](#-usage-examples)  
 - [🛠 API Endpoints](#-api-endpoints)  
 - [📜 License](#-license)  
-
 
 
 ## 🔧 **Features**  
@@ -78,7 +79,6 @@ You can configure the caching proxy using **command-line flags** or **Docker env
 | `--cache-ttl` / `$CACHE_TTL` | Cache expiration time (seconds) | `60` |
 | `--redis-url` / `$REDIS_URL` | Redis connection URL | `"redis://127.0.0.1/"` |
 | `--clear-cache` | Clears Redis cache before starting | `false` |
-
 
 
 ## 📝 **Usage Examples**  
