@@ -33,7 +33,7 @@ A **high-performance caching proxy** built with **Rust, Axum, and Redis** to imp
 
 ```sh
 # Clone the repository
-git clone https://github.com/your-repo/cache-proxy.git
+git clone https://github.com/z7pz/cache-proxy.git
 cd cache-proxy
 
 # Install dependencies & build
@@ -52,17 +52,17 @@ cargo build --release
 
 ```sh
 # Build and run the container
-docker-compose up --build -d
+docker compose up --build -d
 ```
 
 To stop:
 ```sh
-docker-compose down
+docker compose down
 ```
 
 View logs:
 ```sh
-docker-compose logs -f cache-proxy
+docker compose logs -f cache-proxy
 ```
 
 

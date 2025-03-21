@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  cache-proxy:
+    build: .
+    container_name: cache-proxy
+    ports:
+      - "3000:3000"
+    depends_on:
+      - redis
+    environment:
+      - REDIS_URL=redis://redis:6379/
+      - CACHE_TTL=120
+      - ORIGIN=http://example.com
+    restart: unless-stopped
+
+  redis:
+    image: redis:latest
+    container_name: redis-cache
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+
+volumes:
+  redis_data:
+    driver: local
